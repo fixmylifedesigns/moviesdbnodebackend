@@ -1,0 +1,31 @@
+{
+  "name": "movie_app",
+  "version": "1.0.0",
+  "description": "movie app",
+  "main": "index.js",
+  "author": "irving",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "connect-session-knex": "^1.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "http": "^0.0.0",
+    "https": "^1.0.0",
+    "js": "^0.1.0",
+    "knex": "^0.20.9",
+    "moment": "^2.24.0",
+    "pg": "^7.18.1",
+    "sqlite3": "^4.1.1"
+  },
+  "scripts": {
+    "test": "jest --watch --verbose",
+    "start": "node index.js",
+    "server": "nodemon index.js"
+  }
+}
