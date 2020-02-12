@@ -20,9 +20,23 @@ router.get("/", (req, res) => {
 });
 
 router.post("/filter", (req, res) => {
+//    start = req.body.start
+//    end = req.body.end
+// if (start == "today") {
+//    start = moment().format(" YYYY/MM/DD")
+// }
+//   if (end == "tomorrow") {
+
+//     end = "2017/01/05"
+   
+//   }
+//   console.log(start)
+//   console.log(moment().add(1, 'days').format("YYYY/MM/DD"))
+  
   Movies.dateFilter(req.body.start, req.body.end)
     .then(movies => {
       res.status(200).json(movies);
+      console.log(req.body)
     })
     .catch(err => {
       res
@@ -54,7 +68,7 @@ router.post("/newmovie", async (req, res) => {
       .status(500)
       .json({
         error,
-        message: "we ran into an error posting your stolen bike"
+        message: "we ran into an error adding this movie to favorites"
       });
   }
 });

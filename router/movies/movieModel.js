@@ -27,7 +27,9 @@ function remove(id) {
 function dateFilter(start, end) {
   return db("movies")
     .select()
-    .whereBetween("release_date", [start, end]);
+    // .whereBetween("release_date", [start, end]);
+    .where('release_date', '>=', start)
+    .where('release_date', '<', end)
 }
 
 function findById(id) {
